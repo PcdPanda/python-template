@@ -5,6 +5,8 @@ PYTEST ?= pytest
 
 all:
 
+setup-dev:
+	pip install -r requirements.txt
 
 build: 
 	python setup.py build_ext
@@ -16,6 +18,9 @@ doc:
 	-rm -rf doc/build doc/source/generated
 	cd doc; \
 	$(MAKE) html
+
+render-doc: doc
+	python -m http.server --directory doc/build/html
 
 dev: build
 	python -m pip install --no-build-isolation -e .
