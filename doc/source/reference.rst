@@ -2,7 +2,7 @@ API Reference
 =============
 
 
-**SharedMem**
+**TemplateClass**
 
 .. autoclass:: pythontemplate.TemplateClass
    :members:
