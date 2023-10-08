@@ -31,6 +31,10 @@ test-cov:
 
 test: test-cov
 
+tidy:
+	black . -l 120
+	tidy-imports . -r
+
 install: 
 	pip install .
 
